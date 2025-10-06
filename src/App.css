@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: saturate(140%) blur(6px);
+}
+
+.app-main {
+  width:80%;
+  margin: 0 auto;
+  padding: 2rem; 
+}
+
+.app-footer {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  /* Flexbox */
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid;
+  background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.25));
+}
+
+.navbar .nav-list {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar .nav-link {
+  padding: 8px 14px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: 150ms ease-in-out;
+}
+
+.navbar .nav-link.active {
+  /* classe active gestita da NavLink */
+  background: rgba(63, 125, 186, 0.267);
+  color: #082f37;
+  font-weight: 700;
+}
+
+.page {
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+
+/* Home */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 160px);
+}
+
+.hero-card {
+  border-radius: 24px;
+  padding: 40px 28px;
+  max-width: 720px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.hero-card h1 {
+  margin: 0 0 10px;
+}
+
+.hero-card p {
+  margin: 0;;
+}
+
+
+/* About */
+.page-about {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* Products */
+.products-grid {
+  display: flex;
+  flex-wrap:wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 10px;
+}
+
+.product-thumb {
+  height: 140px;
+}
+
+.product-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.product-title {
+  font-size: 16px;
+  margin: 0;
+}
+
+.product-price {
+  margin: 0;
+}
