@@ -17,7 +17,7 @@ export default function ProductsPage() {
         , [])
 
     return (
-        <section className="page page-products">
+        <section className="page-products">
             <div className="page-header">
                 <h2>Prodotti</h2>
             </div>
