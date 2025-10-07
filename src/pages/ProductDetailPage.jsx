@@ -4,7 +4,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 
 export default function ProductDetailPage() {
     const { id } = useParams();
-    const [product, setProduct] = useState(null);
+    const [product, setProduct] = useState();
     const navigate = useNavigate();
 
 
@@ -14,7 +14,7 @@ export default function ProductDetailPage() {
             .then((res) => setProduct(res.data))
             .catch(() => { navigate('/products') })
 
-    }, [id]);
+    }, [id, navigate]);
 
 
     /* return (
@@ -42,7 +42,7 @@ export default function ProductDetailPage() {
 
     return (
         product ? (
-            <section className="page-product-detail">
+            <>
                 <div className="page-header">
                     <h2>{product.title}</h2>
                     <Link to="/products">← Torna ai prodotti</Link>
@@ -60,7 +60,7 @@ export default function ProductDetailPage() {
                         <p>{product.description}</p>
                     </div>
                 </div>
-            </section>
+            </>
         ) : (
             <p>Loading...</p>
         )
